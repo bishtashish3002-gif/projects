@@ -100,6 +100,9 @@ body{
     margin: 0 30px o 15px;
     word-break: break-all;
 }
+.lists input:cheacked ~ .task{
+    text-decoration: line-through;
+}
 .todoLists .list i{
     position: absolute;
     top: 50%;
@@ -131,4 +134,18 @@ body{
     outline: none;
     border: none;
     background: #4070f4;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    pointer-events: none;
+    white-space: nowrap;
+}
+.clear-button:hover{
+    background-color: #0e4bf1;
+}
+@media screen and (max-width: 350px){
+    .container{
+        padding: 25px 10px;
+    }
 }
