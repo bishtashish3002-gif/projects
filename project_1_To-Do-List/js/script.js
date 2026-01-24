@@ -19,3 +19,16 @@ function allTasks(){
     todoLists.style.marginTop = "0px";
     clearButton.style.pointerEvents = "none";
 }
+// add task while we put while in text area and press enter 
+inputField.addEventListener("keyup",(e)=>{
+    let inputVal = inputField.value.trim();// trim function remove space of front and back of the inputed value
+    // if enter buttion is clicked and inputed value lenght is greated 
+    if(e.key ==="Enter" && inputVal.length > 0){
+        let liTag =`<li class="list pending" onclick="handleStaturs(this)">
+            <input type ="checkbox"/>
+            <span class="task">${inputVal}</span>
+            <i class="uil uil-trash" onclick="deleteTask(this)"></i>
+            </li>`
+    }
+    }
+);
