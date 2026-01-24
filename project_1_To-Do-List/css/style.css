@@ -7,7 +7,9 @@
     font-family: sans-serif;
 }
 body{
-    background-color: #e3f2fe;
+    background-color: lightskyblue;
+    
+    
 }
 /* for Scroliabar */
 
@@ -31,10 +33,10 @@ body{
 }
 
 .container{
-    position: relative;
-    max-width: 480px;
+    position: center;
+    max-width: 700px;
     width: 100%;
-    border-radius: 8px;
+    border-radius: 20px;
     padding: 25px;
     margin: 85px auto 0;
     background-color: #fff;

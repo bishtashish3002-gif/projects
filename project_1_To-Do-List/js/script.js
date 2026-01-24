@@ -28,7 +28,21 @@ inputField.addEventListener("keyup",(e)=>{
             <input type ="checkbox"/>
             <span class="task">${inputVal}</span>
             <i class="uil uil-trash" onclick="deleteTask(this)"></i>
-            </li>`
+            </li>`;
+        
+        todoLists.insertAdjacentHTML("beforeend", liTag); //inserting li tag inside the todolist div 
+        inputField.value= ""; // removing value form the input field.
+        allTasks();
     }
-    }
-);
+});
+
+// checking and unchancking the checkbox while we click on the task
+function handleStaturs(e){
+    const checkbox= e.querySelector("input"); // getting checkbox.
+    e.classList.toggle("pending");
+    allTasks();
+}
+// deleting all the tasks while we clidck on the clear botton.
+clearButton.addEventListener("click",()=>{
+    todoLists.innerHTML = "";
+});
