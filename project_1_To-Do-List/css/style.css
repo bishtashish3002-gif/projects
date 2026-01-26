@@ -4,20 +4,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: "Poppins",sans-serif;
 }
 body{
     background-color: lightskyblue;
-    
-    
 }
+
 /* for Scroliabar */
 
 /* width */
 ::-webkit-scrollbar{
     width: 6px;
 }
-
 /* Track */
 ::-webkit-scrollbar-track{
     background: #f2f2f2;
@@ -29,20 +27,19 @@ body{
 }
 /*handle on hober */
 ::-webkit-scrollbar-thumb:hover{
-    background: 3aaa;
+    background: #aaa;
 }
 
 .container{
     position: center;
-    max-width: 700px;
+    max-width: 480px;
     width: 100%;
-    border-radius: 20px;
+    border-radius: 8px;
     padding: 25px;
     margin: 85px auto 0;
     background-color: #fff;
     box-shadow: 0 5px 10px rgba( 0, 0, 0, 0.1);
 }
-
 .container .input-field{
     position: relative;
     height: 64px;
@@ -61,10 +58,10 @@ body{
 .input-field textarea:focus{
     border-color: #4070f4;
 }
-.textarea::-webkit-scrollbar{
+textarea::-webkit-scrollbar{
     display: none;
 }
-.input-field.note-icon{
+.input-field .note-icon{
     position: absolute;
     top: 50%;
     right: 15px;
@@ -81,7 +78,7 @@ body{
     overflow-y: auto;
     padding-right: 10px;
 }
-.todoLists.list{
+.todoLists .list{
     display: flex;
     align-items: flex;
     list-style: none;
@@ -102,7 +99,7 @@ body{
     margin: 0 30px o 15px;
     word-break: break-all;
 }
-.lists input:cheacked ~ .task{
+.list input:checked ~ .task{
     text-decoration: line-through;
 }
 .todoLists .list i{
@@ -116,22 +113,22 @@ body{
     opacity: 0.6;
     display: none;
 }
-.todoLists .linst:hover i{
+.todoLists .list:hover i{
     display: inline-flex;
 }
 .todoLists .list i:hover{
     opacity: 1;
 }
-.container .pading-tasks{
+.container .pending-tasks{
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 25px;
 }
-.pading-tasks span{
+.pending-tasks span{
     color: #333;
 }
-.pading-tasks .clear-button{
+.pending-tasks .clear-button{
     padding: 6px 12px;
     outline: none;
     border: none;
