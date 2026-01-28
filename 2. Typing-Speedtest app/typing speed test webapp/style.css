@@ -50,3 +50,52 @@ body{
     border: 2px solid #2ECC71;
     border-radius: 5px;
 }
+#startWindow{
+    background: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    font-family: helvetica;
+    padding-top: 100px;
+}
+
+#newTestWindow{
+    background: rgb(0, 0, 0,0.7);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    font-family: helvetica;
+    padding-top: 100px;
+    overflow: hidden;
+    display: none;
+}
+
+
+.modalBox h1{
+    font-size: 35px;
+    text-align: center;
+    font-weight: 100;
+}
+.modalBox p{
+    font-size: 38px;
+    text-align: center;
+    font-weight: 100;
+    padding: 20px 0;
+}
+
+.modalBox button{
+    outline: none;
+    padding: 15px;
+    border-style: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    background: #22A7f0;
+    border: 2px solid transparent;
+    color: #fff;
+    font-weight: 100;
+}
