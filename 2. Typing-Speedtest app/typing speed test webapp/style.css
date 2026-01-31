@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
 
@@ -17,7 +17,7 @@ body{
 #timer {
     text-align: center;
     padding: 10px;
-    font-family: Helvetica;
+    font-family: helvetica;
     font-size: 25px;
     background: #2ECC71;
     opacity: 0.8;
@@ -80,7 +80,7 @@ body{
     display: none;
 }
 
-.mailBox{
+.modalBox{
     margin: auto;
     width: 500px;
     background: #fff;
@@ -97,7 +97,7 @@ body{
     font-weight: 100;
 }
 .modalBox p{
-    font-size: 38px;
+    font-size: 18px;
     text-align: center;
     font-weight: 100;
     padding: 20px 0;
