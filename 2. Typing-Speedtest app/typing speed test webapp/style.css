@@ -3,14 +3,17 @@
     padding: 0px;
 
 }
+
 body{
     background: #fff;
     overflow: hidden;
 }
+
 #wrapper{
     margin: auto;
     width: 1200px;
 }
+
 #timer {
     text-align: center;
     padding: 10px;
@@ -23,6 +26,7 @@ body{
     letter-spacing: 2.5px;
     font-weight: 100;
 }
+
 #paraContainer{
     display: none;
     width: 550px;
@@ -36,6 +40,7 @@ body{
     padding: 10px;
     overflow-y: scroll;
 }
+
 #textArea{
     display: none;
     margin: 25px 10px;
@@ -50,6 +55,7 @@ body{
     border: 2px solid #2ECC71;
     border-radius: 5px;
 }
+
 #startWindow{
     background: rgba(0, 0, 0, 0.7);
     height: 100%;
@@ -74,6 +80,16 @@ body{
     display: none;
 }
 
+.mailBox{
+    margin: auto;
+    width: 500px;
+    background: #fff;
+    text-align: center;
+    border: 2px solid #c0392b;
+    border-radius: 10px;
+    padding: 20px;
+    line-height: 1.5;
+}
 
 .modalBox h1{
     font-size: 35px;
@@ -94,8 +110,15 @@ body{
     cursor: pointer;
     font-size: 18px;
     border-radius: 5px;
-    background: #22A7f0;
+    background: #22A7F0;
     border: 2px solid transparent;
     color: #fff;
     font-weight: 100;
+}
+
+.modelBox button:hover{
+    background: #fff;
+    border: 2px solid #22A7F0;
+    color: #22A7F0;
+    transition: 0.2s;
 }
