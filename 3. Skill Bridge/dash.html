@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Skill Gap Analyzer</title>
+    <link rel="stylesheet" href="CSS/dash.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="left-panel">
+        <h2>Enter Your Skills:</h2>
+        <input type="text" id="skillsInput" placeholder="e.g. Java, HTML, CSS">
+
+        <h2>Select Target Role:</h2>
+        <select id="roleSelect">
+            <option value="java">Java Developer</option>
+            <option value="frontend">Frontend Developer</option>
+            <option value="fullstack">Full Stack Developer</option>
+        </select>
+
+        <button onclick="analyzeSkills()">Analyze Skills</button>
+    </div>
+
+    <div class="right-panel">
+        <h2>Skill Match Result:</h2>
+        <div class="progress-bar">
+            <div id="progressFill">0%</div>
+        </div>
+
+        <div class="result-sections">
+            <div>
+                <h3>Your Skills:</h3>
+                <ul id="matchedSkills"></ul>
+            </div>
+
+            <div>
+                <h3>Missing Skills:</h3>
+                <ul id="missingSkills"></ul>
+            </div>
+        </div>
+
+        <div class="recommendations">
+            <h3>Recommendations:</h3>
+            <ul id="recommendationsList"></ul>
+        </div>
+    </div>
+</div>
+
+<script src="js/dash.js"></script>
+</body>
+</html>

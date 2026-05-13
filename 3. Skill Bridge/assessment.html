@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Assessment - SkillGap Analyzer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="dashboard-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>SkillGap Analyzer</span>
+            </div>
+            <div class="nav-breadcrumb">
+                <a href="dashboard.html">Dashboard</a> > <span>Assessment</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="assessment-container">
+        <div class="assessment-sidebar">
+            <div class="assessment-progress">
+                <h3>Progress</h3>
+                <div class="progress-circle">
+                    <svg width="100" height="100">
+                        <circle cx="50" cy="50" r="45" stroke="#e0e0e0" stroke-width="10" fill="none"></circle>
+                        <circle cx="50" cy="50" r="45" stroke="#4CAF50" stroke-width="10" fill="none" 
+                                stroke-dasharray="283" stroke-dashoffset="170" 
+                                transform="rotate(-90 50 50)"></circle>
+                    </svg>
+                    <div class="progress-text">40%</div>
+                </div>
+                <p>4 of 10 questions completed</p>
+            </div>
+
+            <div class="assessment-navigation">
+                <h4>Question Navigation</h4>
+                <div class="question-grid">
+                    <div class="question-nav completed">1</div>
+                    <div class="question-nav completed">2</div>
+                    <div class="question-nav completed">3</div>
+                    <div class="question-nav active">4</div>
+                    <div class="question-nav">5</div>
+                    <div class="question-nav">6</div>
+                    <div class="question-nav">7</div>
+                    <div class="question-nav">8</div>
+                    <div class="question-nav">9</div>
+                    <div class="question-nav">10</div>
+                </div>
+            </div>
+
+            <div class="assessment-timer">
+                <h4>Time Remaining</h4>
+                <div class="timer">
+                    <i class="fas fa-clock"></i>
+                    <span id="timeRemaining">25:30</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="assessment-main">
+            <div class="assessment-header">
+                <div class="assessment-info">
+                    <h1>Python Programming Assessment</h1>
+                    <p>Intermediate Level • 10 Questions • 30 Minutes</p>
+                </div>
+                <div class="assessment-actions">
+                    <button class="btn-secondary" onclick="saveAndExit()">
+                        <i class="fas fa-save"></i> Save & Exit
+                    </button>
+                </div>
+            </div>
+
+            <div class="question-card">
+                <div class="question-header">
+                    <span class="question-number">Question 4 of 10</span>
+                    <span class="question-difficulty">Intermediate</span>
+                </div>
+
+                <div class="question-content">
+                    <h3>What is the output of the following Python code?</h3>
+                    
+                    <div class="code-block">
+                        <pre><code>def fibonacci(n):
+    if n <= 1:
+        return n
+    return fibonacci(n-1) + fibonacci(n-2)
+
+print(fibonacci(6))
+</code></pre>
+                    </div>
+
+                    <div class="question-options">
+                        <label class="option">
+                            <input type="radio" name="question4" value="5">
+                            <div class="option-content">
+                                <span class="option-letter">A</span>
+                                <span class="option-text">5</span>
+                            </div>
+                        </label>
+                        
+                        <label class="option">
+                            <input type="radio" name="question4" value="8">
+                            <div class="option-content">
+                                <span class="option-letter">B</span>
+                                <span class="option-text">8</span>
+                            </div>
+                        </label>
+                        
+                        <label class="option">
+                            <input type="radio" name="question4" value="13">
+                            <div class="option-content">
+                                <span class="option-letter">C</span>
+                                <span class="option-text">13</span>
+                            </div>
+                        </label>
+                        
+                        <label class="option">
+                            <input type="radio" name="question4" value="21">
+                            <div class="option-content">
+                                <span class="option-letter">D</span>
+                                <span class="option-text">21</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-actions">
+                    <button class="btn-secondary" onclick="previousQuestion()">
+                        <i class="fas fa-chevron-left"></i> Previous
+                    </button>
+                    <div class="action-buttons">
+                        <button class="btn-outline" onclick="flagQuestion()">
+                            <i class="fas fa-flag"></i> Flag for Review
+                        </button>
+                        <button class="btn-primary" onclick="nextQuestion()">
+                            Next <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Assessment Complete Modal -->
+    <div id="completeModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Assessment Complete!</h3>
+            </div>
+            <div class="completion-summary">
+                <div class="completion-stats">
+                    <div class="stat">
+                        <i class="fas fa-check-circle"></i>
+                        <span>10/10 Questions Answered</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-clock"></i>
+<!-- Assessment Complete Modal -->
+<div id="completeModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Assessment Complete!</h3>
+        </div>
+
+        <div class="completion-summary">
+            <div class="completion-stats">
+                <div class="stat">
+                    <i class="fas fa-check-circle"></i>
+                    <span>10/10 Questions Answered</span>
+                </div>
+
+                <div class="stat">
+                    <i class="fas fa-clock"></i>
+                    <span>Time Used: 28:45</span>
+                </div>
+
+                <div class="stat">
+                    <i class="fas fa-star"></i>
+                    <span>Score: 80%</span>
+                </div>
+            </div>
+
+            <div class="completion-message">
+                <p>Great job! Your performance shows strong understanding of intermediate Python concepts.</p>
+            </div>
+        </div>
+
+        <div class="modal-actions">
+            <button class="btn-outline" onclick="reviewAnswers()">
+                <i class="fas fa-search"></i> Review Answers
+            </button>
+
+            <button class="btn-primary" onclick="goToDashboard()">
+                <i class="fas fa-home"></i> Back to Dashboard
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Overlay -->
+<div id="modalOverlay" class="modal-overlay"></div>
+
+<!-- Scripts -->
+<script src="js/main.js"></script>
+</body>
+</html>

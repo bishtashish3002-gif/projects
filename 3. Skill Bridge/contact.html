@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form #04</title>
+  <link rel="stylesheet" href="CSS/contactstyle.css">
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="contact-container">
+    <!-- Left side: Form -->
+    <div class="form-section">
+      <h2>Send us a message</h2>
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="text" name="subject" placeholder="Subject" required>
+        <textarea name="message" placeholder="Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <!-- Thank you message -->
+      <div id="thankYouMessage">Thank you! Your message has been sent.</div>
+    </div>
+
+    <!-- Right side: Info -->
+    <div class="info-section">
+      <h2>Contact us</h2>
+      <p>We're open for any suggestion or just to have a chat</p>
+      <ul>
+        <li><i class="fas fa-map-marker-alt"></i> 198 West 21th Street, Suite 721, New York NY 10016</li>
+        <li><i class="fas fa-phone"></i> +1235 2355 98</li>
+        <li><i class="fas fa-envelope"></i> info@yoursite.com</li>
+        <li><i class="fas fa-globe"></i> yoursite.com</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const thankYou = document.getElementById('thankYouMessage');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault(); // prevent actual form submission
+      form.style.display = 'none'; // hide the form
+      thankYou.style.display = 'block'; // show thank you message
+    });
+  </script>
+</body>
+</html>
