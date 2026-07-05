@@ -29,7 +29,10 @@ public class IssueRecord {
       private LocalDate issueDate;
       
       private LocalDate returnDate;
-
+      
+      public IssueRecord() {
+      }
+      
       // Getters and Setters
       public Long getId() {
             return id;
@@ -70,4 +73,9 @@ public class IssueRecord {
       public void setReturnDate(LocalDate returnDate) {
             this.returnDate = returnDate;
       }
+
+      public boolean isReturned() {
+            return returnDate != null;
+      }
+
 }
