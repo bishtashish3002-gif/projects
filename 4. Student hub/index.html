@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Student Utility Hub — simple tools for student life.">
+    <title>Student Utility Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+  </head><body>
+    <header class="site-header">
+      <nav class="nav wrap">
+        <a class="brand" href="index.html">🎓 <span>Student Utility Hub</span></a>
+        <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+        <div class="nav-links">
+          <a class="active" href="index.html">Home</a>
+          <a href="#academic">Academic</a>
+          <a href="#productivity">Productivity</a>
+          <a href="#finance">Finance</a>
+          <a href="pages/settings.html">Settings</a>
+          <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="wrap hero-content">
+          <span class="eyebrow">Free tools for student life</span>
+          <h1>
+            Everything a student needs.<br>
+            <em>In one place.</em>
+          </h1>
+          <p>Calculate, plan, track, and organize your student life with simple tools that keep your information on your device.</p>
+          <a class="button primary" href="#tools">Explore tools →</a>
+        </div>
+      </section>
+      <!-- Dashboard Section -->
+      <section class="wrap dashboard-section">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Your dashboard</span>
+            <h2 id="greeting">Good morning!👋</h2>
+            <p>A quick view of what matters today.</p>
+          </div>
+          <a class="button secondary" href="pages/todo.html">Manage tasks</a>
+        </div>
+        <div class="overview-grid">
+          <article class="metric">
+            <span>📚</span>
+            <div>
+              <small>Study sessions</small>
+              <strong id="session-count">0</strong>
+              <p>completed</p>
+            </div>
+          </article>
+
+          <article class="metric">
+            <span>✅</span>
+            <div>
+              <small>Tasks</small>
+              <strong id="task-count">0 / 0</strong>
+              <p>completed</p>
+            </div>
+          </article>
+
+          <article class="metric">
+            <span>📅</span>
+            <div>
+              <small>Next exam</small>
+              <strong id="next-exam">—</strong>
+              <p id="exam-label">Add an exam</p>
+            </div>
+          </article>
+          <article class="metric">
+            <span>💰</span>
+            <div>
+              <small>This month</small>
+              <strong id="month-spend">₹0</strong>
+              <p>expenses recorded</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="today-tasks">
+          <div class="card-title">
+            <h3>Today’s tasks</h3>
+            <a href="pages/todo.html">View all →</a>
+          </div>
+          <ul id="dashboard-tasks" class="task-preview">
+            <li class="empty">No tasks yet. Add your first task.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Tools Section -->
+      <section id="tools" class="tools-section">
+        <div class="wrap">
+          <div class="section-heading center">
+            <div>
+              <span class="eyebrow">Choose a tool</span>
+              <h2>Useful tools, no clutter.</h2>
+              <p>Open a tool and get started in seconds.</p>
+            </div>
+          </div>
+
+          <div class="category-grid">
+            <article id="academic" class="category">
+              <span>📚</span>
+              <h3>Academic</h3>
+              <p>Attendance, CGPA, grades and exam planning.</p>
+            </article>
+
+            <article id="productivity" class="category">
+              <span>⏱️</span>
+              <h3>Productivity</h3>
+              <p>Tasks and focused study sessions.</p>
+            </article>
+
+            <article id="finance" class="category">
+              <span>💰</span>
+              <h3>Finance</h3>
+              <p>Track expenses and understand spending.</p>
+            </article>
+
+            <article class="category">
+              <span>🛠️</span>
+              <h3>Utilities</h3>
+              <p>More practical student tools are coming soon.</p>
+            </article>
+          </div>
+
+          <div class="tool-grid">
+            <a class="tool-card" href="pages/attendance.html">
+              <i>📊</i>
+              <h3>Attendance Calculator</h3>
+              <p>See your current percentage and what to attend or miss.</p>
+              <span>Open tool →</span>
+            </a>
+
+            <a class="tool-card" href="pages/cgpa.html">
+              <i>🎓</i>
+              <h3>CGPA Calculator</h3>
+              <p>Add semester results and calculate your overall CGPA.</p>
+              <span>Open tool →</span>
+            </a>
+
+            <a class="tool-card" href="pages/todo.html">
+              <i>✅</i>
+              <h3>To-do List</h3>
+              <p>Keep assignments and deadlines visible.</p>
+              <span>Open tool →</span>
+            </a>
+
+            <a class="tool-card" href="pages/pomodoro.html">
+              <i>⏱️</i>
+              <h3>Pomodoro Timer</h3>
+              <p>Stay focused with study and break intervals.</p>
+              <span>Open tool →</span>
+            </a>
+
+            <a class="tool-card" href="pages/exam-countdown.html">
+              <i>📅</i>
+              <h3>Exam Countdown</h3>
+              <p>Never lose track of an important exam.</p>
+              <span>Open tool →</span>
+            </a>
+
+            <a class="tool-card" href="pages/expenses.html">
+              <i>💳</i>
+              <h3>Expense Tracker</h3>
+              <p>Record income and expenses in one place.</p>
+              <span>Open tool →</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <span>🎓 Student Utility Hub</span>
+        <span>Built for everyday student life · 2026</span>
+      </div>
+    </footer>
+
+    <div id="toast" role="status" aria-live="polite"></div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>                                           

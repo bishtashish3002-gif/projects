@@ -1,0 +1,1 @@
+window.HubStore={get(k,f=[]){try{return JSON.parse(localStorage.getItem(`studentHub.${k}`))??f}catch{return f}},set(k,v){localStorage.setItem(`studentHub.${k}`,JSON.stringify(v))},remove(k){localStorage.removeItem(`studentHub.${k}`)}};
