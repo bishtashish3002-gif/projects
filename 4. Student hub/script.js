@@ -6,7 +6,7 @@ let toastTimer;
 themeButton.addEventListener('click', () => {
   body.classList.toggle('dark');
   const darkMode = body.classList.contains('dark');
-  themeButton.textContent = darkMode ? '☀️' : '🌙';
+  themeButton.textContent = darkMode ? 'Light theme' : 'Dark theme';
   themeButton.setAttribute('aria-label', darkMode ? 'Switch to light theme' : 'Switch to dark theme');
 });
 

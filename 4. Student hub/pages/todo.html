@@ -1,1 +1,75 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>To-do List | Student Utility Hub</title><link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/responsive.css"></head><body><header class="site-header"><nav class="nav wrap"><a class="brand" href="../index.html">🎓 Student Utility Hub</a><a class="button secondary" href="../index.html">← Home</a></nav></header><main><section class="page-hero"><div class="wrap"><span class="eyebrow">Productivity</span><h1>To-do List</h1><p>Plan assignments, deadlines, and small wins.</p></div></section><section class="wrap tool-layout"><div class="panel"><h2>Add a task</h2><form id="task-form" class="form-grid"><label class="field full">Task<input id="task-name" required maxlength="100" placeholder="e.g. Complete DBMS assignment"></label><label class="field">Due date<input id="task-date" type="date"></label><label class="field">Priority<select id="task-priority"><option value="Medium">Medium</option><option value="High">High</option><option value="Low">Low</option></select></label><label class="field">Category<input id="task-category" placeholder="e.g. Study"></label><div class="field"><span>&nbsp;</span><button class="button primary">Add task</button></div></form></div><aside class="panel"><h3>Your tasks</h3><ul id="task-list" class="list"></ul></aside></section></main><div id="toast"></div><script src="../js/storage.js"></script><script src="../js/app.js"></script><script src="../js/todo.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>To-do List | Student Utility Hub</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+  </head>
+  <body>
+    <header class="site-header">
+            <nav class="nav wrap"><a class="brand" href="../index.html"><span class="brand-mark" aria-hidden="true">SU</span><span>Student Utility Hub</span></a><div class="nav-links"><a href="../index.html">Home</a><a href="../index.html#academic">Academic</a><a href="../profile.html" class="user-chip" aria-label="Open your profile"><img data-profile-photo alt="" hidden><span class="header-avatar-fallback" data-profile-initials aria-hidden="true">S</span><span data-user-name>Student</span></a><button class="button secondary nav-logout" data-logout>Log out</button><button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20.5 15.5A8.5 8.5 0 0 1 8.5 3.5a8.5 8.5 0 1 0 12 12Z"/></svg></button></div></nav>
+    </header>
+<div class="sidebar-scrim" data-sidebar-scrim></div><aside class="tool-sidebar" id="tool-sidebar" aria-hidden="true" aria-label="Student tools"><div class="sidebar-heading"><div><span class="eyebrow">Your workspace</span><h2>Student tools</h2></div><button class="sidebar-close" type="button" data-sidebar-close aria-label="Close tools panel">×</button></div><nav class="sidebar-links"><a href="../dashboard.html">Dashboard</a><a href="../profile.html">Your profile</a><span class="sidebar-label">Academic</span><a href="../pages/attendance.html">Attendance calculator</a><a href="../pages/cgpa.html">CGPA calculator</a><a href="../pages/exam-countdown.html">Exam countdown</a><span class="sidebar-label">Study &amp; planning</span><a href="../pages/todo.html">To-do list</a><a href="../pages/pomodoro.html">Pomodoro timer</a><a href="../pages/pdf-mcq.html">PDF to MCQ</a><span class="sidebar-label">Money</span><a href="../pages/expenses.html">Expense tracker</a><a href="../pages/settings.html">Settings</a></nav></aside><button class="sidebar-toggle" type="button" data-sidebar-toggle aria-controls="tool-sidebar" aria-expanded="false" aria-label="Open student tools"><span aria-hidden="true">☰</span><span class="sidebar-toggle-label">TOOLS</span></button>
+    <main>
+      <section class="page-hero">
+        <div class="wrap page-hero-layout">
+          <div class="page-hero-copy">
+          <span class="eyebrow">Productivity</span>
+          <h1>To-do List</h1>
+          <p>Plan assignments, deadlines, and small wins.</p>
+          </div>
+          <div class="page-art" aria-hidden="true"><svg viewBox="0 0 180 150">
+            <circle class="art-disc" cx="90" cy="75" r="64" />
+            <rect class="art-solid" x="48" y="31" width="83" height="100" rx="9" />
+            <rect class="art-paper" x="56" y="42" width="67" height="79" rx="4" />
+            <rect class="art-tint" x="65" y="57" width="10" height="10" rx="2" />
+            <path class="art-check" d="m67 61 3 3 5-6" />
+            <path class="art-line" d="M83 62h28" />
+            <rect class="art-tint" x="65" y="78" width="10" height="10" rx="2" />
+            <path class="art-check" d="m67 82 3 3 5-6" />
+            <path class="art-line" d="M83 83h28M66 101h45" />
+            <path class="art-spark" d="m137 41 2.5 6.5L146 50l-6.5 2.5L137 59l-2.5-6.5L128 50l6.5-2.5L137 41Z" />
+          </svg></div>
+        </div>
+      </section>
+      <section class="wrap tool-layout planner-layout">
+        <div class="panel">
+          <h2>Add a task</h2>
+          <form id="task-form" class="form-grid">
+            <label class="field full"
+              >Task<input
+                id="task-name"
+                required
+                maxlength="100"
+                placeholder="e.g. Complete DBMS assignment" /></label
+            ><label class="field"
+              >Due date<input id="task-date" type="date" /></label
+            ><label class="field"
+              >Priority<select id="task-priority">
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+                <option value="Low">Low</option>
+              </select></label
+            ><label class="field"
+              >Category<input id="task-category" placeholder="e.g. Study"
+            /></label>
+            <div class="field">
+              <span>&nbsp;</span
+              ><button class="button primary">Add task</button>
+            </div>
+          </form>
+        </div>
+        <aside class="panel">
+          <h3>Your tasks</h3>
+          <ul id="task-list" class="list"></ul>
+        </aside>
+      </section>
+    </main>
+    <div id="toast"></div>
+    <script src="../js/storage.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/todo.js"></script>
+  </body>
+</html>

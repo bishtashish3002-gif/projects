@@ -1,1 +1,72 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CGPA Calculator | Student Utility Hub</title><link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/responsive.css"></head><body><header class="site-header"><nav class="nav wrap"><a class="brand" href="../index.html">🎓 Student Utility Hub</a><a class="button secondary" href="../index.html">← Home</a></nav></header><main><section class="page-hero"><div class="wrap"><span class="eyebrow">Academic</span><h1>CGPA Calculator</h1><p>Add each semester to calculate and save your overall CGPA.</p></div></section><section class="wrap tool-layout"><div class="panel"><h2>Add a semester</h2><form id="cgpa-form" class="form-grid"><label class="field">Semester<input id="semester" required placeholder="e.g. Semester 1"></label><label class="field">CGPA<input id="cgpa-value" type="number" min="0" max="10" step=".01" required placeholder="e.g. 7.8"></label><div class="field"><span>&nbsp;</span><button class="button primary">Add semester</button></div></form><ul id="semester-list" class="list"></ul></div><aside class="panel"><h3>Overall CGPA</h3><div class="result"><strong id="overall-cgpa">—</strong><span class="hint">Average of saved semesters</span></div></aside></section></main><div id="toast"></div><script src="../js/storage.js"></script><script src="../js/app.js"></script><script src="../js/cgpa.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>CGPA Calculator | Student Utility Hub</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+  </head>
+  <body>
+    <header class="site-header">
+            <nav class="nav wrap"><a class="brand" href="../index.html"><span class="brand-mark" aria-hidden="true">SU</span><span>Student Utility Hub</span></a><div class="nav-links"><a href="../index.html">Home</a><a href="../index.html#academic">Academic</a><a href="../profile.html" class="user-chip" aria-label="Open your profile"><img data-profile-photo alt="" hidden><span class="header-avatar-fallback" data-profile-initials aria-hidden="true">S</span><span data-user-name>Student</span></a><button class="button secondary nav-logout" data-logout>Log out</button><button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20.5 15.5A8.5 8.5 0 0 1 8.5 3.5a8.5 8.5 0 1 0 12 12Z"/></svg></button></div></nav>
+    </header>
+<div class="sidebar-scrim" data-sidebar-scrim></div><aside class="tool-sidebar" id="tool-sidebar" aria-hidden="true" aria-label="Student tools"><div class="sidebar-heading"><div><span class="eyebrow">Your workspace</span><h2>Student tools</h2></div><button class="sidebar-close" type="button" data-sidebar-close aria-label="Close tools panel">×</button></div><nav class="sidebar-links"><a href="../dashboard.html">Dashboard</a><a href="../profile.html">Your profile</a><span class="sidebar-label">Academic</span><a href="../pages/attendance.html">Attendance calculator</a><a href="../pages/cgpa.html">CGPA calculator</a><a href="../pages/exam-countdown.html">Exam countdown</a><span class="sidebar-label">Study &amp; planning</span><a href="../pages/todo.html">To-do list</a><a href="../pages/pomodoro.html">Pomodoro timer</a><a href="../pages/pdf-mcq.html">PDF to MCQ</a><span class="sidebar-label">Money</span><a href="../pages/expenses.html">Expense tracker</a><a href="../pages/settings.html">Settings</a></nav></aside><button class="sidebar-toggle" type="button" data-sidebar-toggle aria-controls="tool-sidebar" aria-expanded="false" aria-label="Open student tools"><span aria-hidden="true">☰</span><span class="sidebar-toggle-label">TOOLS</span></button>
+    <main>
+      <section class="page-hero">
+        <div class="wrap page-hero-layout">
+          <div class="page-hero-copy">
+          <span class="eyebrow">Academic</span>
+          <h1>CGPA Calculator</h1>
+          <p>Add each semester to calculate and save your overall CGPA.</p>
+          </div>
+          <div class="page-art" aria-hidden="true"><svg viewBox="0 0 180 150">
+            <circle class="art-disc" cx="90" cy="75" r="64" />
+            <path class="art-paper" d="M34 52c20-7 38-3 56 10 18-13 36-17 56-10v62c-20-7-38-3-56 10-18-13-36-17-56-10V52Z" />
+            <path class="art-line" d="M90 62v62M47 65c11-2 22 0 31 5m-31 10c11-2 22 0 31 5m40-20c-9 1-17 3-24 7m24 8c-9 1-17 3-24 7" />
+            <path class="art-spark" d="m131 24 3 8 8 3-8 3-3 8-3-8-8-3 8-3 3-8Z" />
+            <circle class="art-tint" cx="45" cy="34" r="8" />
+          </svg></div>
+        </div>
+      </section>
+      <section class="wrap tool-layout">
+        <div class="panel">
+          <h2>Add a semester</h2>
+          <form id="cgpa-form" class="form-grid">
+            <label class="field"
+              >Semester<input
+                id="semester"
+                required
+                placeholder="e.g. Semester 1" /></label
+            ><label class="field"
+              >CGPA<input
+                id="cgpa-value"
+                type="number"
+                min="0"
+                max="10"
+                step=".01"
+                required
+                placeholder="e.g. 7.8"
+            /></label>
+            <div class="field">
+              <span>&nbsp;</span
+              ><button class="button primary">Add semester</button>
+            </div>
+          </form>
+          <ul id="semester-list" class="list"></ul>
+        </div>
+        <aside class="panel">
+          <h3>Overall CGPA</h3>
+          <div class="result">
+            <strong id="overall-cgpa">—</strong
+            ><span class="hint">Average of saved semesters</span>
+          </div>
+        </aside>
+      </section>
+    </main>
+    <div id="toast"></div>
+    <script src="../js/storage.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/cgpa.js"></script>
+  </body>
+</html>
